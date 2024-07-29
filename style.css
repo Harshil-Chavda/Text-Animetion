@@ -1,0 +1,52 @@
+/* Created by Dhanashri Bhavsar */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.container p {
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    left: -0.8em;
+}
+
+.container p:nth-child(odd) {
+    transform: skewY(-30deg) skewX(45deg) scaleY(1.3333);
+}
+
+.container p:nth-child(even) {
+    transform: skewY(-30deg) scaleY(1.3333);
+}
+
+.container p:nth-child(2) {
+    margin-left: 1.3em;
+}
+
+.container p:nth-child(3) {
+    margin-left: 2.6em;
+}
+
+.container p span {
+    display: block;
+    text-align: center;
+    line-height: 1em;
+    animation: letter 3s infinite ease-in-out alternate
+}
+
+@keyframes letter {
+    to {
+        transform: translateY(-100%);
+    }
+}
